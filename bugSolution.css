@@ -1,0 +1,15 @@
+/* bugSolution.css */
+.container {
+  display: flex;
+  width: 500px;
+}
+
+.item {
+  flex: 1;
+  background-color: lightblue;
+  margin: 5px;
+  /* Corrected usage of calc() */
+  min-width: calc(50% - 10px);
+}
+
+/*The previous implementation was incorrect, as it tried to subtract 10px from the flexible 100%, which is incorrect. Flexbox calculates the space available and then divides it based on the flex-grow property. Thus, this is handled differently than block level layout.*/
